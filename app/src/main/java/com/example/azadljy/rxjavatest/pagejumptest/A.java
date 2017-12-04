@@ -8,6 +8,8 @@ import android.widget.EditText;
 
 import com.example.azadljy.rxjavatest.R;
 
+import javax.inject.Inject;
+
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
@@ -16,7 +18,8 @@ import io.reactivex.annotations.NonNull;
 
 public class A extends AppCompatActivity {
     private EditText et_info;
-    public static Observer observer;
+    @Inject
+    Observer<String> observer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

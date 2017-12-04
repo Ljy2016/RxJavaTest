@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'com.neenbedankt.android-apt'
 android {
     compileSdkVersion 26
     buildToolsVersion "27.0.0"
@@ -30,4 +30,10 @@ dependencies {
 
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
     compile "io.reactivex.rxjava2:rxjava:2.1.7"
+
+    //dager2
+    compile 'com.google.dagger:dagger:2.13'
+    compile 'org.glassfish:javax.annotation:10.0-b28'
+    apt 'com.google.dagger:dagger-compiler:2.13'
+
 }
